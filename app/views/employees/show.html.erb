@@ -1,0 +1,23 @@
+<h1> Employee: <%= "#{@employee.first_name} #{@employee.last_name}" %> </h1>
+
+<h3>
+<ul>
+<li> Alias: <%= @employee.alias %> </li>
+<li> Title: <%= @employee.title %> </li>
+<li> Office: <%= @employee.office %> </li>
+<li> Dog: <%= @employee.dog.name %> </li>
+</ul>
+</h3> 
+<br>
+<%= form_tag edit_employee_path, method: :get do %>
+ <%= submit_tag "Edit Employee" %>
+<% end %>
+<br>
+<%= form_tag employees_path, method: :get do %>
+ <%= submit_tag "Home" %>
+<% end %> <br>
+
+<img src=<%= @employee.img_url %> alt="Italian Trulli">
+
+
+
